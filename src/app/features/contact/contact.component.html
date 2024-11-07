@@ -1,0 +1,66 @@
+<section
+  class="max-w-4xl mx-auto px-2 sm:px-6 lg:px-4 pt-20 h-fit min-h-screen"
+>
+  <div class="md:w-[512px] h-auto justify-self-center">
+    <h1 class="font-bold text-5xl leading-10 tracking-tighter mb-2">
+      Quer falar comigo? 
+    </h1>
+    <p>
+      Você pode entrar em contato pelo formulário abaixo ou pelo <span class="text-[var(--color-dark)]">contato&#64;andersongomes.dev.br</span>
+    </p>
+    <form (submit)="sendEmail($event)">
+      <div class="relative mt-4">
+        <label
+          for="from_name"
+          class="absolute text-sm text-gray-500 bg-white px-1 left-2 -top-2 z-10"
+        >
+          Nome
+        </label>
+        <input
+          id="from_name"
+          name="from_name"
+          type="text"
+          placeholder=" "
+          class="block w-full px-2.5 py-3 text-sm text-gray-900 bg-transparent border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600"
+        />
+      </div>
+      <div class="relative mt-4">
+        <label
+          for="from_email"
+          class="absolute text-sm text-gray-500 bg-white px-1 left-2 -top-2 z-10"
+        >
+          Email
+        </label>
+        <input
+          id="from_email"
+          type="email"
+          name="from_email"
+          placeholder=" "
+          class="block w-full px-2.5 py-3 text-sm text-gray-900 bg-transparent border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600"
+        />
+      </div>
+      <div class="relative mt-4">
+        <label
+          for="message"
+          class="absolute text-sm text-gray-500 bg-white px-1 left-2 -top-2 z-10"
+        >
+        Mensagem
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder=" "
+          class="block w-full px-2.5 py-3 text-sm text-gray-900 bg-transparent border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600"
+        ></textarea>
+      </div>
+      <div class="relative mt-4">
+        <button
+          type="submit"
+          class="border-2 border-[var(--color-primary)] px-2 py-1 rounded m-1 transition-transform duration-300 hover:scale-110"
+        >
+          Enviar
+        </button>
+      </div>
+    </form>
+  </div>
+</section>

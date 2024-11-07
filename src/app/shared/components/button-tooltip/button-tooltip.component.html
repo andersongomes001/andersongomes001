@@ -1,0 +1,15 @@
+<button
+  class="border-2 border-[var(--color-primary)] px-2 py-1 rounded m-1 transition-transform duration-300 hover:scale-110"
+  [attr.data-tooltip-target]="id+'_'+name"
+>
+  <img [src]="icon_src" [alt]="name" class="inline" />
+</button>
+
+<div
+  [id]="id+'_'+name"
+  role="tooltip"
+  class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-[var(--color-primary)] rounded-lg shadow-sm opacity-0 tooltip dark:bg-[var(--color-primary)]"
+>
+  {{ name | uppercase }}
+  <div class="tooltip-arrow" data-popper-arrow></div>
+</div>

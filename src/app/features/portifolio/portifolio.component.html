@@ -1,0 +1,24 @@
+<section class="max-w-4xl mx-auto px-2 sm:px-6 lg:px-4 pt-20 h-fit min-h-screen">
+  <h1 class="font-bold text-5xl leading-10 tracking-tighter mb-8">
+    Projects
+  </h1>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+    <div *ngFor="let project of projects">
+      <div class="h-80 min-h-80 max-h-80 flex justify-center">
+        <img
+        [src]="project.imageUrl"
+        class="rounded-md mb-4 transition-transform duration-300 hover:scale-110 object-cover border-2 border-[var(--color-primary)]"
+      />
+      </div>
+      <h2 class="font-bold text-2xl leading-8 text-[var(--color-primary)] mb-2 flex justify-center">
+        {{ project.title }}
+      </h2>
+      <div class="mb-4 flex justify-center">
+        <app-button-tooltip [name]="experience.name" [icon_src]="experience.icon_src" *ngFor="let experience of project?.experiences"></app-button-tooltip>
+      </div>
+      <p class="mb-4 flex justify-center">
+        {{ project.description }}
+      </p>
+    </div>
+  </div>
+</section>
