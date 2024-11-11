@@ -3,8 +3,11 @@
 @tailwind utilities;
 
 :root {
-    --color-brackground: #e0e0e0;
+    /*--color-brackground: #e0e0e0;*/
+    --color-brackground: #080808;
+    --color-text: white;
     --color-primary: #E0234E;
-    --color-dark: #B61A3D;
+    /*--color-dark: #B61A3D;*/
+    --color-dark: #AF1338;
     --color-light: #E65073;
 }
