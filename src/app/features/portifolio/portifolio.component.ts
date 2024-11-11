@@ -16,7 +16,7 @@ export class PortifolioComponent {
   projects: Projects[] = [
     {
       title: 'Sistema de Gestão de Energia (SGE)',
-      imageUrl: 'images/72ee2581-aada-4a93-8cfd-3a7d4371d889.png',
+      imageUrl: 'images/72ee2581-aada-4a93-8cfd-3a7d4371d889.png.webp',
       description:
         'Este é um sistema de gestão de energia elétrica, onde participei da construção do Back-end e do Front-end, o sistema é focado em atender distribuidora de energia de todo o país.',
       experiences: [
@@ -46,7 +46,7 @@ export class PortifolioComponent {
     },
     {
       title: "Meu portifólio",
-      imageUrl: 'images/andersongomes.dev.br.png',
+      imageUrl: 'images/andersongomes.dev.br.png.webp',
       description: 'Este é meu portifólio, onde desenvolvi alguns projetos pessoais e profissionais.',
       experiences: [
         {
