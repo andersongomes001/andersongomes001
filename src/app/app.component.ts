@@ -7,11 +7,14 @@ import { HomeComponent } from './features/home/home.component';
 import { PortifolioComponent } from './features/portifolio/portifolio.component';
 import { ContactComponent } from './features/contact/contact.component';
 import { AboutComponent } from './features/about/about.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
+    ReactiveFormsModule,
     RouterModule,
     RouterOutlet,
     HeaderComponent,

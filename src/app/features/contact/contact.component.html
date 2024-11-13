@@ -8,7 +8,7 @@
     <p>
       Você pode entrar em contato pelo formulário abaixo ou pelo e-mail <span class="text-[var(--color-dark)]">contato&#64;andersongomes.dev.br</span>
     </p>
-    <form (submit)="sendEmail($event)">
+    <form (submit)="sendEmail($event)" [formGroup]="contactForm">
       <div class="relative mt-4">
         <label
           for="from_name"
@@ -17,12 +17,17 @@
           Nome
         </label>
         <input
+          formControlName="from_name"
           id="from_name"
           name="from_name"
           type="text"
           placeholder=" "
           class="block w-full px-2.5 py-3 text-sm bg-transparent border border-[var(--color-dark)] rounded-lg focus:outline-none focus:"
         />
+        <div *ngIf="contactForm.get('from_name')?.touched && getError('from_name')">
+          {{ getError('from_name') }}
+        </div>
+
       </div>
       <div class="relative mt-4">
         <label
@@ -32,12 +37,16 @@
           Email
         </label>
         <input
+          formControlName="from_email"
           id="from_email"
           type="email"
           name="from_email"
           placeholder=" "
           class="block w-full px-2.5 py-3 text-sm bg-transparent border border-[var(--color-dark)] rounded-lg focus:outline-none"
         />
+        <div *ngIf="contactForm.get('from_email')?.touched && getError('from_email')">
+          {{ getError('from_email') }}
+        </div>
       </div>
       <div class="relative mt-4">
         <label
@@ -47,14 +56,19 @@
         Mensagem
         </label>
         <textarea
+          formControlName="message"
           id="message"
           name="message"
           placeholder=" "
           class="block w-full px-2.5 py-3 text-sm bg-transparent border border-[var(--color-dark)] rounded-lg focus:outline-none"
         ></textarea>
+        <div *ngIf="contactForm.get('message')?.touched && getError('message')">
+          {{ getError('message') }}
+        </div>
       </div>
       <div class="relative mt-4">
         <button
+          [disabled]="contactForm.invalid"
           type="submit"
           class="border-2 border-[var(--color-primary)] px-2 py-1 rounded m-1 transition-transform duration-300 hover:scale-110"
         >
@@ -62,5 +76,11 @@
         </button>
       </div>
     </form>
+    <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400 border-2 border-[var(--color-dark)]" role="alert" *ngIf="send_success">
+      <span class="font-medium">Tudo certo!</span> Em breve entraremos em contato.
+    </div>
+    <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 border-2 border-[var(--color-dark)]" role="alert" *ngIf="send_error">
+      <span class="font-medium">Ops!</span> Não foi possível enviar esta mensagem, mas Você ainda pode enviar um email diretamente.
+    </div>
   </div>
 </section>
