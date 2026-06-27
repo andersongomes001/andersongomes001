@@ -15,57 +15,40 @@ import { ButtonTooltipComponent } from '../../shared/components/button-tooltip/b
 export class PortifolioComponent {
   projects: Projects[] = [
     {
-      title: 'Sistema de Gestão de Energia (SGE)',
+      title: 'SaaS de Gestão de Energia (Zaruc Cloud)',
       imageUrl: 'images/72ee2581-aada-4a93-8cfd-3a7d4371d889.png.webp',
       description:
-        'Este é um sistema de gestão de energia elétrica, onde participei da construção do Back-end e do Front-end, o sistema é focado em atender distribuidora de energia de todo o país.',
+        'Sistema SaaS de gestão de energia elétrica para distribuidoras. Atende Energisa (grupo inteiro), Cemig, Celesc, Neoenergia e ELFSM. Construído com Spring Boot + Angular + PostgreSQL. Arquitetura evoluída de monólito PHP para microsserviços com clean architecture, segurança JWT/API Key, criptografia de dados sensíveis e observabilidade com SigNoz e Zabbix.',
       experiences: [
-        {
-          name: 'html',
-          icon_src: 'https://skillicons.dev/icons?i=html',
-        },
-        {
-          name: 'css',
-          icon_src: 'https://skillicons.dev/icons?i=css',
-        },
-        {
-          name: 'javascript',
-          icon_src: 'https://skillicons.dev/icons?i=javascript',
-        }, {
-          name: 'git',
-          icon_src: 'https://skillicons.dev/icons?i=git',
-        }, {
-          name: 'angular',
-          icon_src: 'https://skillicons.dev/icons?i=angular',
-        },
-        {
-          name: 'spring',
-          icon_src: 'https://skillicons.dev/icons?i=spring'
-        }
+        { name: 'java', icon_src: 'https://skillicons.dev/icons?i=java' },
+        { name: 'spring', icon_src: 'https://skillicons.dev/icons?i=spring' },
+        { name: 'angular', icon_src: 'https://skillicons.dev/icons?i=angular' },
+        { name: 'postgresql', icon_src: 'https://skillicons.dev/icons?i=postgresql' },
+        { name: 'docker', icon_src: 'https://skillicons.dev/icons?i=docker' },
+        { name: 'linux', icon_src: 'https://skillicons.dev/icons?i=linux' },
       ],
     },
     {
-      title: "Meu portifólio",
-      imageUrl: 'images/andersongomes.dev.br.png.webp',
-      description: 'Este é meu portifólio, onde desenvolvi alguns projetos pessoais e profissionais.',
+      title: 'Infraestrutura e Segurança',
+      imageUrl: 'images/Facebook-Linkedin-image-template-3.jpg.webp',
+      description:
+        'Administração de 20+ servidores Linux com Docker, MQTT, ChirpStack e LoRa. Implantação de Wazuh SIEM para detecção de ameaças, Cloudflare para proteção de origem, monitoramento com Zabbix e Grafana, e pipelines CI/CD com Jenkins e SonarQube.',
       experiences: [
-        {
-          name: 'angular',
-          icon_src: 'https://skillicons.dev/icons?i=angular',
-        },
-        {
-          name: 'html',
-          icon_src: 'https://skillicons.dev/icons?i=html',
-        },
-        {
-          name: 'css',
-          icon_src: 'https://skillicons.dev/icons?i=css',
-        },
-        {
-          name: 'javascript',
-          icon_src: 'https://skillicons.dev/icons?i=javascript',
-        }
-      ]
+        { name: 'docker', icon_src: 'https://skillicons.dev/icons?i=docker' },
+        { name: 'linux', icon_src: 'https://skillicons.dev/icons?i=linux' },
+        { name: 'jenkins', icon_src: 'https://skillicons.dev/icons?i=jenkins' },
+        { name: 'aws', icon_src: 'https://skillicons.dev/icons?i=aws' },
+      ],
+    },
+    {
+      title: 'Rinha de Backend 2025 (Rust)',
+      imageUrl: 'images/rinha2025.png.webp',
+      description:
+        'Participei da Rinha de Backend 2025 com uma API em Rust. Criei o ranking em tempo real com frontend gerado por IA. Foi meu primeiro projeto em Rust, saindo da zona de conforto do Java.',
+      experiences: [
+        { name: 'rust', icon_src: 'https://skillicons.dev/icons?i=rust' },
+        { name: 'angular', icon_src: 'https://skillicons.dev/icons?i=angular' },
+      ],
     },
   ];
 }

@@ -1,31 +1,51 @@
-<section class="max-w-4xl mx-auto px-2 sm:px-6 lg:px-4 pt-20 h-fit min-h-96 font-bold">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-    <div
-      class="col-span-2 md:col-span-1 rounded-md  transition-transform duration-300 hover:scale-110"
-    >
+<section class="max-w-4xl mx-auto px-2 sm:px-6 lg:px-4 pt-20 h-fit min-h-96">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div>
+      <h1 class="font-bold text-5xl leading-10 tracking-tighter mb-8">
+        Sobre
+      </h1>
+      <p class="mb-4 leading-relaxed">
+        Engenheiro de software com mais de 9 anos de experiência. Fui o principal
+        responsável pelo desenvolvimento do sistema SaaS de gestão de energia elétrica
+        da Zaruc Tecnologia, utilizado por <strong>5 distribuidoras de energia no Brasil</strong>:
+        Energisa, Cemig, Celesc, Neoenergia e ELFSM.
+      </p>
+      <p class="mb-4 leading-relaxed">
+        Liderei a migração de um legado PHP para uma arquitetura moderna em
+        Spring Boot + Angular + PostgreSQL, eliminando instabilidade crônica e
+        viabilizando a escala do sistema para milhares de requisições simultâneas.
+      </p>
+      <p class="mb-4 leading-relaxed">
+        Também atuei em infraestrutura Linux, Docker, CI/CD com Jenkins,
+        segurança (Wazuh SIEM, Cloudflare), observabilidade (SigNoz, Zabbix, Grafana)
+        e administração de 20+ servidores em produção.
+      </p>
+    </div>
+    <div class="rounded-md">
       <img
         src="images/Facebook-Linkedin-image-template-3.jpg.webp"
-        class="rounded-md mb-4 object-contain w-full h-auto" 
-        alt="Programing languages image"
+        class="rounded-md mb-4 object-contain w-full h-auto"
+        alt="Programming languages image"
         loading="lazy"
       />
     </div>
-    <div class="m-6 col-span-2 md:col-span-1">
-      <h3 class="font-bold text-2xl leading-8">Hello,  <span class="font-bold text-2xl leading-8 text-[var(--color-dark)] hover:underline">Eu sou Anderson</span></h3>
-     
-      <p>
-        Estou trabalhando em tempo integral como Desenvolvedor Angular e Spring Boot, TypeScript, java, Spring Boot e PostgreSQL.
-      </p>
-      <p>
-        Eu adoro o desafio de construir algo que outras pessoas vão usar para administrar seus negócios.
-      </p>
-    </div>
-    <div class="mb-8 col-span-2">
-      <h2 class="font-bold text-2xl leading-8">
-        Minhas experiências incluem.
-      </h2>
-      <div>
-        <app-button-tooltip [name]="experience.name" [icon_src]="experience.icon_src" *ngFor="let experience of experiences"></app-button-tooltip>
+  </div>
+
+  <div class="mt-16">
+    <h2 class="font-bold text-3xl leading-8 mb-8">
+      Competências
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div *ngFor="let category of skillCategories" class="border border-gray-700 rounded-lg p-4">
+        <h3 class="font-bold text-lg mb-3 text-[var(--color-primary)]">
+          {{ category.name }}
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          <span *ngFor="let skill of category.skills"
+            class="px-3 py-1 text-sm bg-gray-800 text-gray-200 rounded-full">
+            {{ skill }}
+          </span>
+        </div>
       </div>
     </div>
   </div>

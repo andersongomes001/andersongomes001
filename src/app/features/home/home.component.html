@@ -1,15 +1,57 @@
 <section
-  class="flex justify-center items-center mx-auto max-w-full px-2 pt-20 h-fit  min-h-96"
+  class="flex justify-center items-center mx-auto max-w-full px-2 pt-20 h-fit min-h-96"
 >
-  <div class="w-[512px] h-auto justify-self-center">
-    <h1 class="font-bold text-5xl leading-10 tracking-tighter mb-2">
-      Olá eu sou Anderson
+  <div class="w-[600px] h-auto justify-self-center text-center">
+    <h1 class="font-bold text-5xl leading-10 tracking-tighter mb-4">
+      Anderson Gomes
     </h1>
-    <p class="font-bold text-2xl leading-8">
-      <span class="text-[var(--color-dark)] hover:underline">Desenvolvedor back-end.</span>
-      <br />
-      Estou a cada dia aprendendo e aprimorando minhas habilidades de Frontend,
-      back-end, banco de dados, etc.
+    <p class="font-bold text-2xl leading-8 mb-2">
+      <span class="text-[var(--color-dark)]">Engenheiro de Software Sênior</span>
     </p>
+    <p class="text-lg leading-7 mb-8">
+      Arquiteto de sistemas Java/Spring. Construí o SaaS de gestão de energia
+      usado por Energisa, Cemig, Celesc e Neoenergia.
+    </p>
+    <div class="flex gap-4 justify-center">
+      <a
+        href="https://www.linkedin.com/in/devanderson/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-block px-6 py-3 bg-[var(--color-primary)] text-white rounded-lg font-bold hover:opacity-90 transition-opacity"
+      >
+        LinkedIn
+      </a>
+      <a
+        routerLink="/portifolio"
+        class="inline-block px-6 py-3 border-2 border-[var(--color-primary)] text-[var(--color-primary)] rounded-lg font-bold hover:bg-[var(--color-primary)] hover:text-white transition-colors"
+      >
+        Portfólio
+      </a>
+    </div>
   </div>
 </section>
+
+<!--
+<section class="max-w-4xl mx-auto px-2 sm:px-6 lg:px-4 pt-20 h-fit">
+  <h2 class="font-bold text-3xl leading-8 mb-8 text-center">
+    Conteúdo Técnico
+  </h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div *ngFor="let article of articles" class="border border-gray-700 rounded-lg p-5 hover:shadow-lg transition-shadow">
+      <h3 class="font-bold text-lg mb-2">{{ article.title }}</h3>
+      <p class="text-sm leading-relaxed mb-4 text-gray-300">{{ article.description }}</p>
+      <div class="flex flex-wrap gap-2">
+        <span *ngFor="let tag of article.tags"
+          class="px-2 py-1 text-xs bg-gray-800 text-gray-200 rounded">
+          {{ tag }}
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="text-center mt-8">
+    <a routerLink="/about" class="text-[var(--color-primary)] hover:underline font-bold">
+      Ver mais sobre mim →
+    </a>
+  </div>
+</section>
+-->
